@@ -1,6 +1,11 @@
 build:
 	@npx tsc index.ts
 
-run: build
+run:
 	@node index.js
+	@rm index.js
+
+dev: build run
+
+clean:
 	@rm index.js
