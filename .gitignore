@@ -137,3 +137,6 @@ dist
 
 env-setup.sh
 .qodo
+
+# typescript
+index.js
