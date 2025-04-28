@@ -12,14 +12,14 @@ app.post("/accounts/create", (req, res) => {
 
 app.post("/accounts/login", (req, res) => {
 
-})
+});
 
 // /tasks routes
 app.post("/tasks/get", (req, res) => {
 
 })
 app.post("/tasks/update", (req, res) => {
-    
+
 })
 
 
