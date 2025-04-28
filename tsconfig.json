@@ -1,0 +1,8 @@
+{
+    "compilerOptions": {
+      "module": "commonjs",      // or "esnext", depending on your setup
+      "esModuleInterop": true,   // Add this line
+      "skipLibCheck": true       // Optional, can help with some other module issues
+    }
+  }
+  
