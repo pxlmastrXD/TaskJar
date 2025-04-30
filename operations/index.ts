@@ -1,4 +1,8 @@
-// import "supabase" from database.js
-import supabase from "./supabase";
+import client from "./postgres";
 
-export default {};
+async function test() {
+    await client.connect();
+    
+}
+
+export default test;

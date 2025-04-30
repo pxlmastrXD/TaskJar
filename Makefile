@@ -8,4 +8,4 @@ run:
 dev: build run
 
 clean:
-	@rm index.js
+	@rm *.js */*.js
