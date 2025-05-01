@@ -139,4 +139,9 @@ env-setup.sh
 .qodo
 
 # typescript
-index.js
+*.js
+
+# database
+database.db
+
+exec.ts
