@@ -144,4 +144,4 @@ env-setup.sh
 # database
 database.db
 
-temp.ts
+exec.ts
