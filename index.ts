@@ -6,19 +6,19 @@ const app = express();
 const port = process.env.PORT as string;
 
 // /accounts routes
-app.post("/accounts/create", (req, res) => {
+app.post("/accounts/create", (req: any, res: any) => {
     
 })
 
-app.post("/accounts/login", (req, res) => {
+app.post("/accounts/login", (req: any, res: any) => {
 
 });
 
 // /tasks routes
-app.post("/tasks/get", (req, res) => {
+app.post("/tasks/get", (req: any, res: any) => {
 
 })
-app.post("/tasks/update", (req, res) => {
+app.post("/tasks/update", (req: any, res: any) => {
 
 })
 
