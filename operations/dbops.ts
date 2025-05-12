@@ -36,3 +36,15 @@ export function getTasks(uuid: string): string {
     }
     return tasks
 }
+
+// Works
+export function updateTasks(uuid: string, tasks: string): boolean {
+    var status = true;
+    try {
+        db.prepare("UPDATE taskjar SET tasks=? WHERE uuid=?;").run(tasks, uuid);
+    } catch (error) {
+        status = false;
+        console.log("failed updating tasks");
+    }
+    return status;
+}
