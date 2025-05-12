@@ -24,3 +24,15 @@ export function login(username: string, password: string): string {
     }
     return uuid;
 }
+
+// Works
+export function getTasks(uuid: string): string {
+    var tasks = "";
+    try {
+        var res = db.prepare("SELECT tasks FROM taskjar WHERE uuid=?").all(uuid);
+        tasks = res[0].tasks;
+    } catch (error) {
+        console.log("error get tasks");
+    }
+    return tasks
+}

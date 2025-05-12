@@ -1,3 +1,3 @@
-import { login } from "./operations/dbops";
+import { getTasks } from "./operations/dbops";
 
-console.log(login('test', 'user'));
+console.log(getTasks("uuid"));
