@@ -145,3 +145,5 @@ env-setup.sh
 database.db
 
 exec.ts
+
+portforward.sh
