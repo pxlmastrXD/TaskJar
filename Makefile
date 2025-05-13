@@ -10,7 +10,6 @@ clean:
 
 dev: build run clean
 
-
 exec:
 	@npx tsc exec.ts
 	@node exec.js
