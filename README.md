@@ -1,5 +1,7 @@
 # TaskJar
-The BEST To-Do app! In development, first release planned for Q4 2025
+The BEST To-Do app! In development, alpha release planned for Q4 2025
+
+First main release planned for when i get an actual computer
 
 Roadmap:
 - [x] Add SQLite
