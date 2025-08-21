@@ -6,7 +6,7 @@ const express = require('express');
 const app = express();
 app.use(express.json());
 
-import { newUser } from './operations/dbops';
+import { login, newUser } from './operations/dbops';
 
 // /accounts routes
 app.post("/accounts/create", (req: any, res: any) => {
@@ -21,7 +21,12 @@ app.post("/accounts/create", (req: any, res: any) => {
 })
 
 app.post("/accounts/login", (req: any, res: any) => {
-
+    var username: string = req.body.username;
+    var password: string = req.body.password;
+    var uuid: string = login(username, password);
+    res.json({
+        uuid: uuid,
+    })
 });
 
 // /tasks routes
