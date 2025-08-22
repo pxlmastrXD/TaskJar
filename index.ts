@@ -6,7 +6,7 @@ const express = require('express');
 const app = express();
 app.use(express.json());
 
-import { login, newUser } from './operations/dbops';
+import { getTasks, login, newUser, updateTasks } from './operations/dbops';
 
 // /accounts routes
 app.post("/accounts/create", (req: any, res: any) => {
@@ -31,10 +31,21 @@ app.post("/accounts/login", (req: any, res: any) => {
 
 // /tasks routes
 app.post("/tasks/get", (req: any, res: any) => {
-
+    var uuid = req.body.uuid;
+    var tasks = getTasks(uuid);
+    res.json({
+        tasks: tasks,
+    })
 })
 app.post("/tasks/update", (req: any, res: any) => {
-
+    var uuid = req.body.uuid;
+    var newTasks = req.body.tasks;
+    var status = updateTasks(uuid, newTasks);
+    if (status == true) {
+        res.send("true");
+    } else {
+        res.send("false");
+    };
 })
 
 
